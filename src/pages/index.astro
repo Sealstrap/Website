@@ -1,0 +1,28 @@
+---
+import MainLayout from "../layouts/Main.astro";
+---
+
+<style lang="scss">
+	.hello-container {
+		height: 100vh;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		h1 {
+			font-weight: 800;
+			font-size: 6em;
+			font-family: "Raleway", sans-serif;
+
+			.strap-text {
+				color: #2f5de0;
+			}
+		}
+	}
+</style>
+<MainLayout>
+	<div class="hello-container">
+		<h1><span>Seal</span><span class="strap-text">strap</span></h1>
+		<p>soon...</p>
+	</div>
+</MainLayout>
