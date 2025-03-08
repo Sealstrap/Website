@@ -1,0 +1,2 @@
+Contact: mailto:security@sealstrap.app
+Expires: 2026-12-31T07:00:00.000Z
