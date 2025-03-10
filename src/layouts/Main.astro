@@ -17,9 +17,8 @@ const title = titleInput ? `${titleInput} | Sealstrap` : "Sealstrap";
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 
-		<title>
-			{title}
-		</title>
+		<title>{title}</title>
+		<link rel="canonical" href={Astro.url} />
 
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -29,32 +28,45 @@ const title = titleInput ? `${titleInput} | Sealstrap` : "Sealstrap";
 		/>
 
 		<meta name="language" content="en-US" />
-		<meta name="robots" content={noIndex ? "noindex" : "follow,index"} />
+
+		<meta
+			name="robots"
+			content={noIndex ? "noindex, nofollow" : "index, follow"}
+		/>
 		<meta name="description" content={description} />
 		<meta
 			name="keywords"
-			content="roblox, roblox launcher, roblox bootstrapper, roblox addon, roblox extension, improve roblox, sealstrap"
+			content="roblox, roblox launcher, roblox bootstrapper, roblox addon, roblox extension, improve roblox, sealstrap, game launcher, gaming tools, roblox enhancement, cross-platform launcher"
 		/>
 		{
 			lastUpdated ? (
 				<meta
-					name="last-revised"
+					name="last-modified"
 					content={new Date(lastUpdated).toUTCString()}
 				/>
 			) : null
 		}
 
+		<meta name="author" content="Sealstrap" />
 		<meta name="color-scheme" content="dark" />
 		<meta name="theme-color" content={SEALSTRAP_BLUE} />
 
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content={Astro.url} />
 		<meta property="og:title" content={title} />
 		<meta property="og:description" content={description} />
 		<meta property="og:image" content="/_static/og-image.png" />
+		<meta property="og:site_name" content="Sealstrap" />
+		<meta property="og:locale" content="en_US" />
 
-		<meta property="twitter:card" content="summary_large_image" />
-		<!-- 
-		<meta property="twitter:img:src" content="/_static/og-image.png" />
-		<link rel="icon" type="image/x-icon" href="/_static/icon.ico" />-->
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content={title} />
+		<meta name="twitter:description" content={description} />
+		<meta name="twitter:image" content="/_static/og-image.png" />
+		<meta name="twitter:site" content="@sealstraprblx" />
+
+		<link rel="icon" type="image/x-icon" href="/_static/icon.ico" />
+		<link rel="apple-touch-icon" href="/_static/apple-touch-icon.png" />
 	</head>
 </html>
 <body>
