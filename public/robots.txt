@@ -1,3 +1,3 @@
 User-agent: *
 
-Sitemap: https://www.roseal.live/sitemap-index.xml
+Sitemap: https://www.sealstrap.app/sitemap-index.xml
