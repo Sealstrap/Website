@@ -1,3 +1,4 @@
 User-agent: *
+Allow: /
 
 Sitemap: https://www.sealstrap.app/sitemap-index.xml
