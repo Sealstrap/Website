@@ -32,12 +32,12 @@ const title = titleInput ? `${titleInput} | Sealstrap` : "Sealstrap";
 			name="robots"
 			content={noIndex
 				? "noindex,nofollow"
-				: "follow,index,max-image-preview:large"}
+				: "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1"}
 		/>
 		<meta name="description" content={description} />
 		<meta
 			name="keywords"
-			content="roblox, roblox launcher, roblox bootstrapper, roblox addon, roblox extension, improve roblox, sealstrap, game launcher, gaming tools, roblox enhancement, cross-platform launcher"
+			content="roblox launcher, roblox bootstrapper, sealstrap, cross-platform roblox, roblox addon, roblox extension, game launcher, gaming tools, roblox enhancement, cross-platform launcher, roblox mod loader"
 		/>
 		{
 			lastUpdated ? (
@@ -53,6 +53,10 @@ const title = titleInput ? `${titleInput} | Sealstrap` : "Sealstrap";
 		<meta name="color-scheme" content="dark" />
 		<meta name="theme-color" content={SEALSTRAP_BLUE} />
 
+		<meta name="distribution" content="global" />
+		<meta name="coverage" content="Worldwide" />
+		<meta name="target" content="all" />
+
 		<meta property="og:type" content="website" />
 		<meta property="og:url" content={Astro.url.href} />
 		<meta property="og:title" content={title} />
@@ -66,9 +70,12 @@ const title = titleInput ? `${titleInput} | Sealstrap` : "Sealstrap";
 		<meta name="twitter:card" content="summary_large_image" />
 		<meta name="twitter:image" content="/_static/og-image.png" />
 		<meta name="twitter:site" content="@SealstrapRBLX" />
+		<meta name="twitter:creator" content="@julLiaNRBLX" />
 
 		<link rel="icon" type="image/x-icon" href="/_static/icon.ico" />
 		<link rel="apple-touch-icon" href="/_static/apple-touch-icon.png" />
+
+		<link rel="sitemap" type="application/xml" href="/sitemap-index.xml" />
 	</head>
 </html>
 <body>
